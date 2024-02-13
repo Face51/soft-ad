@@ -1,5 +1,5 @@
 import random
-
+#created by Aditya Gond
 # Dictionary of words, hints, and categories
 words_and_hints = {
     # Colors
