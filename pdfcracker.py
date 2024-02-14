@@ -1,6 +1,6 @@
 import pikepdf
 from tqdm import tqdm
-
+#you have to use rockyou wordlist for this or you can use your own wordlist
 # Load password list with Latin-1 encoding
 with open("rockyou.txt", encoding="latin-1") as file:
     passwords = [line.strip() for line in file]
