@@ -9,7 +9,7 @@ with open("rockyou.txt", encoding="latin-1") as file:
 for password in tqdm(passwords, "Decrypting PDF"):
     try:
         # Open PDF file
-        with pikepdf.open("AYUSH.pdf", password=password, allow_overwriting_input=True) as pdf:
+        with pikepdf.open("enter pdf file name with extension", password=password, allow_overwriting_input=True) as pdf:
             # Password decrypted successfully, break out of the loop
             print("[+] Password found:", password)
             break
