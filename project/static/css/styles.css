@@ -1,0 +1,242 @@
+/* Reset default styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+}
+
+/* Welcome page styles */
+.welcome-page {
+    font-size: 26px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.subtext {
+    font-size: 24px;
+    margin-top: -38px;
+}
+
+.welcome-page p {
+    font-size: 14px;
+}
+
+/* Background image styles */
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Wave overlay styles */
+.wave-overlay {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+/* CSS styles for the white rounded box */
+.rounded-box {
+    background-color: #fff; /* White background */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px; /* Padding around the content */
+    margin-top: 20px; /* Add margin between welcome text and subtext */
+    display: inline-block; /* Display as inline block */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+/* CSS styles for the blue color font */
+.blue-font {
+    color: #007bff; /* Blue color font */
+    text-decoration: none; /* Remove underline */
+    font-size: 22px; /* Adjust font size of the paragraph */
+}
+/* Change background and text color when hovering */
+.rounded-box:hover {
+    background-color: #007bff; /* Change background color to blue */
+}
+
+.rounded-box:hover .blue-font {
+    color: #fff; /* Change text color to white */
+}
+
+
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    z-index: -1; /* Place it behind other elements */
+}
+
+.wave-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    z-index: -1; /* Place it behind other elements */
+}
+ 
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+}
+
+/* Other styles for form elements, buttons, etc. */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background-image {
+    /* Add a dark overlay to ensure text is readable */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.login-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.btn-login {
+    background: #007bff;
+    color: #fff;
+    padding: .75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-login:hover {
+    background: #0056b3;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.wave-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 100%;
+    background: url("{{ url_for('static', filename='images/54.png') }}") repeat-x;
+}
+
+.wave1 {
+    animation: moveWave 10s linear infinite;
+}
+
+.wave2 {
+    animation: moveWave 15s linear infinite;
+    opacity: 0.5;
+    bottom: 10px;
+}
+
+.wave3 {
+    animation: moveWave 20s linear infinite;
+    opacity: 0.3;
+    bottom: 15px;
+}
+
+@keyframes moveWave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Add styles for your login container and form elements here */
+.form-check {
+    text-align: right;
+}

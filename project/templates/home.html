@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Link to your CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Background image -->
+    <img src="{{ url_for('static', filename='images/background.jpg') }}" class="background-image" alt="Background Image">
+    
+    <!-- Wave overlay -->
+    <img src="{{ url_for('static', filename='images/wave.jpg') }}" class="wave-overlay" alt="Wave Image">
+    
+    <!-- Your content goes here -->
+    <div class="welcome-page">
+        <h1>Welcome </h1>
+        <div class="subtext">To Our Website</div>
+        <p>This is a simple bank management system</p>
+        <!-- White rounded box with "Get Started" link -->
+        <div class="rounded-box">
+            <a href="{{ url_for('get_started') }}" class="blue-font">Get Started</a>
+        </div>
+    </div>
+    <!-- End of content -->
+</body>
+</html>

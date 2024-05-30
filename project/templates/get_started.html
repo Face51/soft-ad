@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Link to your CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Favicon for branding -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+</head>
+<body>
+    <!-- Background image -->
+    <img src="{{ url_for('static', filename='images/background.jpg') }}" class="background-image" alt="Background Image">
+        <!-- Wave overlay with multiple layers for animation effect -->
+        <div class="wave-overlay wave1"></div>
+        <div class="wave-overlay wave2"></div>
+        <div class="wave-overlay wave3"></div>
+    </div>
+    
+    <!-- Login container centered on the page -->
+    <div class="login-container">
+        <h1>Login to Your Account</h1>
+        <form method="post" action="/login" autocomplete="off">
+            <div class="form-group">
+                <label for="username">Username or Email:</label>
+                <input type="text" id="username" name="username" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <small id="passwordHelp" class="form-text text-muted">Passwords are case-sensitive.</small>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Remember me</label>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+            <p class="forgot-password"><a href="#">Forgot password?</a></p>
+        </form>
+        <!-- Sign-up link -->
+        <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+    
+    <!-- Footer with additional links or information -->
+    <footer>
+        <!-- No company information -->
+    </footer>
+</body>
+</html>
