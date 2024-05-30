@@ -6,7 +6,7 @@ import random
 DB_HOST = 'localhost'
 DB_NAME = 'bankdb'
 DB_USER = 'root'
-DB_PASSWORD = 'pass'
+DB_PASSWORD = 'anshika'
 
 
 # Function to connect to the database
