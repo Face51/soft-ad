@@ -1,5 +1,5 @@
 CREATE DATABASE bankdb;
-
+--select user();
 -- Use the created database
 USE bankdb;
 
