@@ -3,35 +3,27 @@
 int main() {
     int marks;
 
-    // Input marks from the user
-    printf("Enter the marks: ");
+    // Input marks
+    printf("Enter your marks: ");
     scanf("%d", &marks);
 
-    // Grade assignment based on marks range
+    // Determine grade
     if (marks >= 90 && marks <= 100) {
-        printf("\nMarks = %d, Grade = O\n", marks);
-    } 
-    else if (marks >= 80) {
-        printf("\nMarks = %d, Grade = E\n", marks);
-    } 
-    else if (marks >= 70) {
-        printf("\nMarks = %d, Grade = A\n", marks);
-    } 
-    else if (marks >= 60) {
-        printf("\nMarks = %d, Grade = B\n", marks);
-    } 
-    else if (marks >= 50) {
-        printf("\nMarks = %d, Grade = C\n", marks);
-    } 
-    else if (marks >= 40) {
-        printf("\nMarks = %d, Grade = D\n", marks);
-    } 
-    else if (marks >= 0) {
-        printf("\nMarks = %d, Grade = F\n", marks);
-    } 
-    else {
-        // Invalid input case
-        printf("\nINVALID INPUT! Marks should be between 0 and 100.\n");
+        printf("Grade: O\n");
+    } else if (marks >= 80 && marks < 90) {
+        printf("Grade: E\n");
+    } else if (marks >= 70 && marks < 80) {
+        printf("Grade: A\n");
+    } else if (marks >= 60 && marks < 70) {
+        printf("Grade: B\n");
+    } else if (marks >= 50 && marks < 60) {
+        printf("Grade: C\n");
+    } else if (marks >= 40 && marks < 50) {
+        printf("Grade: D\n");
+    } else if (marks < 40 && marks >= 0) {
+        printf("Grade: F\n");
+    } else {
+        printf("Invalid marks entered.\n");
     }
 
     return 0;
