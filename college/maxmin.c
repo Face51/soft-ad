@@ -5,37 +5,20 @@ int main() {
     int max, min;
 
     // Input: four numbers
-    printf("Enter first number: ");
-    scanf("%d", &num1);
-
-    printf("Enter second number: ");
-    scanf("%d", &num2);
-
-    printf("Enter third number: ");
-    scanf("%d", &num3);
-
-    printf("Enter fourth number: ");
-    scanf("%d", &num4);
+printf("Enter four numbers: ");
+scanf("%d %d %d %d", &num1, &num2, &num3, &num4);
 
     // Determine maximum
-    if (num1 >= num2 && num1 >= num3 && num1 >= num4)
-        max = num1;
-    else if (num2 >= num1 && num2 >= num3 && num2 >= num4)
-        max = num2;
-    else if (num3 >= num1 && num3 >= num2 && num3 >= num4)
-        max = num3;
-    else
-        max = num4;
+    max = num1;
+    if (num2 > max) max = num2;
+    if (num3 > max) max = num3;
+    if (num4 > max) max = num4;
 
     // Determine minimum
-    if (num1 <= num2 && num1 <= num3 && num1 <= num4)
-        min = num1;
-    else if (num2 <= num1 && num2 <= num3 && num2 <= num4)
-        min = num2;
-    else if (num3 <= num1 && num3 <= num2 && num3 <= num4)
-        min = num3;
-    else
-        min = num4;
+    min = num1;
+    if (num2 < min) min = num2;
+    if (num3 < min) min = num3;
+    if (num4 < min) min = num4;
 
     // Output result
     printf("\nGreatest = %d", max);
@@ -43,3 +26,4 @@ int main() {
 
     return 0;
 }
+
