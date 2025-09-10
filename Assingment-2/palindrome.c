@@ -25,11 +25,9 @@ int main() {
     }
 
     // Check if reversed number is equal to original
-    if (org == reverse) {
-        printf("%d is a palindrome.\n", org);
-    } else {
-        printf("%d is not a palindrome.\n", org);
-    }
+    printf("%d is %sa palindrome.\n", org, (org == reverse) ? "" : "not ");
+
 
     return 0;
 }
+
