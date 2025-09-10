@@ -8,13 +8,18 @@ int main() {
     printf("Enter a positive integer: ");
     scanf("%d", &n);
 
-    // Compute factorial
-    for (i = 1; i <= n; i++) {
-        fact = fact * i;
+    if (n >= 0) {
+        // Compute factorial if the input is non-negative
+        for (i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        // Display the result
+        printf("Factorial of %d is %d\n", n, fact);
     }
-
-    // Display the result
-    printf("Factorial of %d is %d\n", n, fact);
+    else {
+        // Handle negative input
+        printf("Factorial is not defined for negative numbers.\n");
+    }
 
     return 0;
 }
