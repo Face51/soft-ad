@@ -9,6 +9,12 @@ int main() {
     printf("Enter a positive integer: ");
     scanf("%d", &number);
 
+    // Validate input
+    if (number <= 0) {
+        printf("Please enter a positive integer.\n");
+        return 1;
+    }
+
     org = number; // Save original number for later comparison
 
     // Process each digit
@@ -21,8 +27,8 @@ int main() {
             fact *= i;
         }
 
-        sum += fact;          // Add factorial to sum
-        number /= 10;         // Remove last digit
+        sum += fact;      // Add factorial to sum
+        number /= 10;     // Remove last digit
     }
 
     // Check if sum equals the original number
