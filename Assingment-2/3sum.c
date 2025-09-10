@@ -6,10 +6,16 @@ int main() {
     int n, i, sum = 0;
 
     // Input a positive integer
-    printf("Enter a Range: ");
+    printf("Enter a positive integer: ");
     scanf("%d", &n);
 
-    // Calculate the sum to n
+    // Check if the input is positive
+    if (n <= 0) {
+        printf("Please enter a positive integer.\n");
+        return 1; // Exit the program if input is invalid
+    }
+
+    // Calculate the sum from 1 to n
     for (i = 1; i <= n; i++) {
         sum = sum + i;
     }
