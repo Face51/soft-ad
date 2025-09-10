@@ -1,0 +1,36 @@
+1)  Enter a positive integer: 5
+Factorial of 5 is 120
+
+2)Enter two positive integers: 6 8
+HCF of 6 and 8 is 2
+LCM of 6 and 8 is 24
+
+3)Enter a positive integer: 6
+Sum of numbers from 1 to 6 is: 21
+
+4)Enter a positive integer: 8
+The result is -4
+
+5)Enter the number of terms: 8
+Fibonacci series: 0 1 1 2 3 5 8 13 
+
+6)Enter a positive integer: 13
+The result is 28
+
+9)Enter a positive integer: 654
+654 is not an Armstrong number.
+        
+Enter a positive integer: 1634
+1634 is an Armstrong number.
+
+10)Enter a positive integer: 145
+145 is a Krishnamurthy number.
+
+Enter a positive integer: 123
+123 is not a Krishnamurthy number.
+
+11)Enter a non-negative integer: 121 
+121 is a palindrome.
+
+Enter a non-negative integer: 122
+122 is not a palindrome.
