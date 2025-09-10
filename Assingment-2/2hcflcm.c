@@ -9,6 +9,12 @@ int main() {
     printf("Enter two positive integers: ");
     scanf("%d %d", &a, &b);
 
+    // Check if both numbers are positive
+    if (a <= 0 || b <= 0) {
+        printf("Both numbers must be positive integers.\n");
+        return 1; // Exit the program with an error code
+    }
+
     // Find HCF using the Euclidean Algorithm
     int x = a, y = b;
     while (y != 0) {
