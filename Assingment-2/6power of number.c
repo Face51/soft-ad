@@ -9,6 +9,12 @@ int main() {
     printf("Enter a positive integer: ");
     scanf("%d", &n);
 
+    // Validate input
+    if (n <= 0) {
+        printf("Please enter a positive integer.\n");
+        return 1;
+    }
+
     int temp = n; // Store original number if needed
 
     // Process each digit
@@ -17,8 +23,9 @@ int main() {
         int p = 1;
 
         // Calculate d^d
-        for (i = 0; i < d; i++)
+        for (i = 0; i < d; i++) {
             p *= d;
+        }
 
         sum += p;    // Add to sum
         n /= 10;     // Remove last digit
