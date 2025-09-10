@@ -32,11 +32,8 @@ int main() {
     }
 
     // Check if sum equals the original number
-    if (sum == org) {
-        printf("%d is a Krishnamurthy number.\n", org);
-    } else {
-        printf("%d is not a Krishnamurthy number.\n", org);
-    }
+    printf("%d is %sa Krishnamurthy number.\n", org, (sum == org) ? "" : "not ");
 
     return 0;
 }
+
