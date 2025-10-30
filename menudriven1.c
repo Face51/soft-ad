@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <math.h>
 
-// Function prototypes
-int fact(int n);
-int gcd(int a, int b);
-int reverse(int n);
-int prime(int n);
-int armstrong(int n);
+// Function prototypes (only data types, no variable names)
+int fact(int);
+int gcd(int, int);
+int reverse(int);
+int prime(int);
+int armstrong(int);
 
 int main() {
     int ch, res, num, num1, num2;
@@ -14,13 +13,12 @@ int main() {
     printf("1. To find factorial of a number.\n");
     printf("2. To find GCD of two numbers.\n");
     printf("3. To find reverse of a number.\n");
-    printf("4. To check whether a number is prime or not.\n");
-    printf("5. To check whether a number is Armstrong or not.\n");
+    printf("4. To check if a number is prime or not.\n");
+    printf("5. To check if a number is Armstrong or not.\n");
 
     printf("Enter your choice: ");
     scanf("%d", &ch);
 
-    // switch case starts
     switch (ch) {
         case 1:
             printf("Enter a number: ");
@@ -40,14 +38,14 @@ int main() {
             printf("Enter a number: ");
             scanf("%d", &num);
             res = reverse(num);
-            printf("The reverse number is: %d\n", res);
+            printf("The reverse of the number is: %d\n", res);
             break;
 
         case 4:
             printf("Enter a number: ");
             scanf("%d", &num);
             res = prime(num);
-            if (res)
+            if (res == 1)
                 printf("The number is prime.\n");
             else
                 printf("The number is not prime.\n");
@@ -57,10 +55,10 @@ int main() {
             printf("Enter a number: ");
             scanf("%d", &num);
             res = armstrong(num);
-            if (res)
-                printf("The number is Armstrong.\n");
+            if (res == 1)
+                printf("The number is an Armstrong number.\n");
             else
-                printf("The number is not Armstrong.\n");
+                printf("The number is not an Armstrong number.\n");
             break;
 
         default:
@@ -70,14 +68,16 @@ int main() {
     return 0;
 }
 
-// ------------------- Function Definitions -------------------
+// Function definitions
 
 int fact(int n) {
     int i, res = 1;
     if (n < 0)
-        return 0; // factorial not defined for negative numbers
+        return 0; // Factorial not defined for negative numbers
+
     for (i = 1; i <= n; i++)
         res *= i;
+
     return res;
 }
 
@@ -101,9 +101,11 @@ int reverse(int n) {
 }
 
 int prime(int n) {
+    int i;
     if (n <= 1)
         return 0;
-    for (int i = 2; i <= n / 2; i++) {
+
+    for (i = 2; i <= n / 2; i++) {
         if (n % i == 0)
             return 0;
     }
@@ -111,16 +113,11 @@ int prime(int n) {
 }
 
 int armstrong(int n) {
-    int rem, sum = 0, temp = n, digits = 0;
+    int temp = n, sum = 0, digit;
     while (temp != 0) {
-        digits++;
+        digit = temp % 10;
+        sum += digit * digit * digit;
         temp /= 10;
     }
-    temp = n;
-    while (temp != 0) {
-        rem = temp % 10;
-        sum += pow(rem, digits);
-        temp /= 10;
-    }
-    return (sum == n);
+    return (sum == n) ? 1 : 0;
 }
