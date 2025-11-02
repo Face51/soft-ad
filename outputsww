@@ -1,1 +1,66 @@
+Enter size of Set A: 5
+Enter elements of Set A:
+Element 1: 1
+Element 2: 2
+Element 3: 5
+Element 4: 6
+Element 5: 4
 
+Enter size of Set B: 3
+Enter elements of Set B:
+Element 1: 2
+Element 2: 3
+Element 3: 2
+Duplicate found! Enter a different value.
+Element 3: 4
+
+Union of Set A and Set B is: { 1, 2, 5, 6, 4, 3 }
+
+
+
+
+
+
+Enter size of Set A: 5
+
+Enter elements of Set A:
+Element 1: 5
+Element 2: 2
+Element 3: 3
+Element 4: 4
+Element 5: 5
+Duplicate! Please enter a different number.
+Element 5: 8
+
+Enter size of Set B:  2
+
+Enter elements of Set B:
+Element 1: 1
+Element 2: 8
+
+Set Difference (A - B): { 5, 2, 3, 4}
+
+
+
+
+
+
+
+
+Enter size of Set A: 5
+
+Enter elements of Set A:
+Element 1: 1
+Element 2: 5
+Element 3: 6
+Element 4: 3
+Element 5: 2
+
+Enter size of Set B:  3
+
+Enter elements of Set B:
+Element 1: 3
+Element 2: 5
+Element 3: 4
+
+Intersection of Set A and Set B: { 5, 3}
